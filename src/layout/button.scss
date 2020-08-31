@@ -1,0 +1,64 @@
+.button {
+    font-size: rem(19px);
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: rem(20px) rem(35px);
+    border-radius: rem(50px);
+    border: rem(1px) solid transparent;
+    outline: transparent;
+}
+
+.button--color--white {
+    background-color: #ffF;
+    color: $darkGreen;
+    &:hover {
+        background-color: $darkGreen;
+        color: #fff;
+    }
+}
+
+.button--color--green {
+    background-color: $darkGreen;
+    color: #fff;
+    &:hover {
+        background-color: $hoverGreen;
+    }
+}
+
+.button--color--transparent {
+    font-size: rem(18px);
+    font-weight: normal;
+    text-transform: none;
+    background-color: transparent;
+    color: $darkGreen;
+    &:hover {
+        color: #000;
+    }
+
+}
+
+.video__start {
+    background: url(../img/pictures/play.png) center center no-repeat;
+    width: rem(16px);
+    height: rem(22px);
+    outline: transparent;
+}
+
+.video__playback-button, .video__volume-button {
+    width: rem(13px);
+    height: rem(13px);
+    border-radius: 50%;
+    background: #626262;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    outline: transparent;
+}
+
+.video__icon {
+    background: url(../img/pictures/volume.png) center center no-repeat;
+    width: rem(18px);
+    height: rem(22px);
+    outline: transparent;
+}

@@ -1,0 +1,224 @@
+.slider-section {
+    background-color: #F8FAF9;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: rem(-220px);
+        width: rem(196px);
+        height: rem(463px);
+        background: url(../img/pictures/palm_leaf_white.png) center center / contain no-repeat;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: rem(-50px);
+        width: rem(135px);
+        height: rem(112px);
+        background: url(../img/pictures/many_bluberries.png) center center / contain no-repeat;
+    }
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slider__list {
+    display: flex;
+    height: 100%;
+    width: 100% !important; //slider plugin
+    padding: 0;
+    margin: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    transition: .5s all ease-out;
+    position: relative;
+}
+
+.slider__item {
+    height: 100%;
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 0 4%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @include tablets {
+        flex-direction: column;
+    }
+
+}
+
+.slider__image {
+    display: flex;
+    align-items: center;
+    width: rem(545px);
+    height: rem(470px);
+    overflow: hidden;
+
+    @include tablets {
+        width: rem(450px);
+        height: rem(450px);
+        object-fit: contain;
+    }
+
+    @include phones {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+.slider__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 69%;
+
+     @include tablets {
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.slider__ingredients {
+    margin-bottom: rem(30px);
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: rem(14px);
+    position: relative;
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: rem(91px);
+        width: rem(91px);
+        position: relative;
+        border-radius: rem(4px);
+        overflow: hidden;
+        background-color: $blue;
+        cursor: pointer;
+    }
+
+    &-icon {
+        height: rem(46px);
+        width: rem(46px);
+        fill: #ffffff;
+
+        &-element {
+            fill: #000000;
+        }
+    }
+
+
+    &:hover {
+        .slider__ingredients-list {
+            display: flex;
+        }
+    }
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.slider__desc{
+    color: #666666;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    &-title {
+        font-size: rem(36px);
+        font-weight: bold;
+        color: #000000;
+        text-transform: uppercase;
+        margin-bottom: rem(10px);
+        line-height: 1.2;
+    }
+
+    &-text {
+        margin-bottom: rem(20px);
+        line-height: 1.2;
+    }
+
+    &-list {
+        margin-bottom: rem(30px);
+        .details {
+            .details__desc {
+                font-weight: bold;
+                color: #000000;
+            }
+        }
+    }
+
+    &-item {
+        display: inline-flex;
+        flex-direction: column;
+        margin-right: rem(80px);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    @include tablets {
+        align-items: center;
+
+        &-title {
+            text-align: center;
+            font-size: rem(30px);
+        }
+        &-text {
+            text-align: center;
+            width: 70%;
+        }
+    }
+}
+
+.slider__order {
+    display: flex;
+    align-items: center;
+
+    &-price {
+        font-size: rem(50px);
+        font-weight: 300;
+        color: #151515;
+        margin-right: rem(20px);
+    }
+}
+
+
+
+//slider hover with ingredients
+
+.slider__ingredients-list {
+    position: absolute;
+    top: 0;
+    left: rem(90px);
+    width: rem(270px);
+    height: rem(329px);
+    border-radius: rem(5px);
+    background-color: rgba(255, 255, 255, .93);
+    border: solid 1px #eeeeee;
+    color: #333537;
+    padding: rem(24px) rem(30px);
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: rem(16px);
+    font-weight: 500;
+    text-transform: initial;
+}

@@ -1,0 +1,200 @@
+.video-section {
+    background: #f8faf9;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        height: rem(77px);
+        width: rem(90px);
+        background: url(../img/pictures/small_blurred_leaf.png) center center / contain no-repeat;
+        right: 5%;
+        top: 25%;
+        z-index: $z-leaf-pic;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        height: rem(135px);
+        width: rem(72px);
+        background: url(../img/pictures/small_leaf.png) center center / contain no-repeat;
+        left: 1%;
+        bottom: 20%;
+        z-index: $z-leaf-pic;
+    }
+}
+
+.video {
+    position: relative; 
+
+    &__element { //video__mp4
+        display: flex;
+        width: rem(660px);
+        height: rem(370px);
+        object-fit: cover;
+        margin: auto;
+
+        @include tablets {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        background-color: #404040;
+        width: rem(660px);
+        height: rem(35px);
+        padding: 0 rem(25px);
+
+        @include tablets {
+            padding: 0 rem(35px);
+        }
+
+        @include phones {
+            padding: 0 rem(20px);
+        }
+    }
+
+    &__playpause {
+        height: rem(22px);
+        width: rem(16px);
+        margin-right: rem(25px);
+        cursor: pointer;
+
+        svg.video__playpause-icon {
+            fill: #626262;
+            width: 100%;
+            height: 100%;
+
+            &--play {
+                opacity: 1;
+            }
+
+            &--pause {
+                display: none;
+            }
+        }
+    }
+
+    svg.video__volume-control-icon {
+        fill: #626262;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__volume-control {
+        height: rem(22px);
+        width: rem(16px);
+        cursor: pointer;
+
+        svg.video__volume-control-icon {
+            fill: #626262;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__playback {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        svg.video__playback-icon {
+            fill: #ffffff;
+        }
+    }
+
+    &__progress, &__volume-progress {
+        height: rem(4px);
+        background: #626262;
+        flex: 1;
+        cursor: pointer;
+    }
+
+    &__total {
+        width: 100%;
+        background: #626262;
+        display: flex;
+        height: 100%;
+    }
+
+    &__current {
+        height: 100%;
+        display: flex;
+        position: relative;
+
+        &::before {
+            content: "";
+            height: rem(13px);
+            width: rem(13px);
+            border-radius: 50%;
+            display: flex;
+            background-color: #626262;
+            position: absolute;
+            top: 0;
+            transform: translate(0, -35%);
+            left: 100%;
+        }
+    }
+
+    &__volume-current {
+        height: 100%;
+        display: flex;
+        position: relative;
+
+        &::before {
+            content: "";
+            height: rem(13px);
+            width: rem(13px);
+            border-radius: 50%;
+            display: flex;
+            background-color: #626262;
+            position: absolute;
+            top: 0;
+            transform: translate(0, -35%);
+            left: 100%;
+        }
+    }
+    
+    &__volume-progress {
+        min-width: rem(58px);
+        margin-left: rem(7px);
+    }
+    
+    &__volume {
+        display: flex;
+        align-items: center;
+        margin-left: rem(25px);
+        
+        @include tablets {
+            display: none;
+        }
+    }
+}
+
+.video__playpause.paused {
+    .video__playback-icon {
+        visibility: hidden;
+    }
+    .video__playpause-icon {
+        &--play {
+            display: none;
+        }
+
+        &--pause {
+            opacity: 1;
+        }
+    }
+}
+
+.muted {
+    svg {
+      fill-opacity: 0.3;
+    }
+  }

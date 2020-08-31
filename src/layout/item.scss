@@ -1,0 +1,22 @@
+.item {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        display: inline-flex;
+        width: rem(35px);
+        height: rem(35px);
+        overflow: hidden;
+        margin-right: rem(25px);
+    
+        &-element {
+            width: 100%;
+            height: 100%;
+            fill: #333537;
+        }
+    }
+
+    &__desc {
+        margin-right: auto;
+    }
+}

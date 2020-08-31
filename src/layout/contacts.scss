@@ -1,0 +1,59 @@
+.contacts {
+    @include phones {
+        margin-bottom: rem(20px);
+    }
+}
+
+
+.contacts__address {
+    color: #000000;
+    font-size: rem(21px);
+    font-style: normal;
+
+    @include phones {
+        margin-bottom: rem(13px);
+    }
+}
+
+.contacts__phone {
+    display: flex;
+    align-items: center;
+    white-space: nowrap; //so text does not wrap on spaces
+
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.contacts__phone.header__phone {
+    @include tablets {
+        display: none;
+    }
+}
+
+.contacts__icon {
+    width: rem(12px);
+    height: rem(12px);
+    fill: #ffffff;
+    margin-right: rem(6px);
+    flex-shrink: 0;
+
+    &--green {
+        fill: $darkGreen;
+    }    
+}
+
+.contacts__text {
+    font-style: normal;
+    font-size: rem(24px);
+    text-decoration: none;
+    
+    &--green {
+        color: $darkGreen;
+        font-size: rem(21px);    
+    }
+
+    
+}
+
+

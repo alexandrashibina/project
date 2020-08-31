@@ -1,0 +1,140 @@
+.team-section {
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: "";
+        height: rem(114px);
+        width: rem(104px);
+        background: url(../img/pictures/raspberry.png) center left / contain no-repeat;
+        left: rem(-16px);
+        bottom: rem(-60px);
+        z-index: $z-berries-pic;
+    }
+
+    &__title {
+        margin-bottom: rem(48px);
+
+        @include tablets {
+            margin-bottom: rem(32px);
+        }
+    }
+}
+
+.team__list {
+
+    &--desktop {
+        display: flex;
+        justify-content: center;
+    }
+
+    &--mobile {
+        display: none;
+    }
+    
+    @include tablets {
+        &--desktop {
+            display: none;
+        }
+        &--mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.team__item {
+    width: rem(220px);
+    height: 100%;
+    margin-right: rem(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablets {
+        margin-right: 0;
+        margin-bottom: rem(22px);
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.team__avatar {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: rem(17px);
+
+    &-photo {
+        object-fit: cover;
+        object-position: left;
+        height: 100%;
+    }
+}
+
+.team__title {
+    text-transform: none;
+    padding: 0;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    margin-bottom: rem(20px);
+
+    @include tablets {
+        margin-bottom: rem(20px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &-icon {
+        width: rem(9px);
+        height: rem(7px);
+        fill: $darkGreen;
+        margin-left: rem(5px);
+        flex-shrink: 0;
+    }
+
+    &-name{
+        display: flex;
+        font-size: rem(21px);
+        font-weight: bold;
+        color: #000000;
+    }    
+}
+
+.team__content {
+    height: 0;
+    overflow: hidden;
+    transition: height .3s;
+    position: absolute;
+    top: 100%;
+
+    @include tablets {
+        position: static;
+    }
+
+    &-title {
+        color: #000000;
+        font-weight: normal;
+    }
+
+    &-text {
+        font-size: rem(16px);
+        color: #666666;
+        font-weight: 300;
+    }
+}

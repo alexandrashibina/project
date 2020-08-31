@@ -1,0 +1,26 @@
+.footer {
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%
+}
+
+.footer__container {
+    padding: rem(30px) 0;
+}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+
+
+

@@ -1,0 +1,30 @@
+.menu {
+    margin: 0 30px;
+    padding-top: 5px;
+    
+    @include tablets {
+        display: none;
+    }
+}
+
+.menu__list {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu__item {
+    flex-wrap: wrap;
+    margin-right: rem(25px);
+    margin-bottom: 5px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.menu__link {
+    font-size: $baseFontSize;
+    text-decoration: none;
+    white-space: nowrap; //so text does not wrap on spaces
+}

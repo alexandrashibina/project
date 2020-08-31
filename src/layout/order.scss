@@ -1,0 +1,24 @@
+.order-section {
+    background: url(../img/pictures/blueberry.png) left 3% bottom 10% no-repeat, url(../img/pictures/green_leaf.png) right 1% bottom 5% no-repeat, url(../img/pictures/background_form.png) center center /cover no-repeat;
+    color: $darkGreen;
+    position: relative;
+
+    @include tablets {
+        background: url(../img/pictures/background_form.png) center center /cover no-repeat;
+    }
+    
+    .section__title {
+        color: inherit;
+        margin-bottom: rem(35px);
+    }
+
+    &::before {
+        content: "";
+        height: rem(145px);
+        width: rem(145px);
+        background: url(../img/pictures/blackberry.png) center right /contain no-repeat;
+        position: absolute;
+        right: rem(-5px);
+        top: rem(-80px);
+    }
+}

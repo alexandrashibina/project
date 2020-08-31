@@ -1,0 +1,19 @@
+.item {
+  display: flex;
+  align-items: center;
+}
+.item__icon {
+  display: inline-flex;
+  width: rem(35px);
+  height: rem(35px);
+  overflow: hidden;
+  margin-right: rem(25px);
+}
+.item__icon-element {
+  width: 100%;
+  height: 100%;
+  fill: #333537;
+}
+.item__desc {
+  margin-right: auto;
+}

@@ -1,0 +1,46 @@
+.hero {
+    background: url(../img/pictures/leaf.png) right bottom no-repeat;
+    background-color: $blue;
+    color: #ffffff;
+    height: 100%;
+    min-height: rem(650px);
+    position: relative;
+
+    &:before {
+        content: url(../img/pictures/small_leaf.png);
+        position: absolute;
+        left: 3%;
+        bottom: rem(-60px);
+    }
+
+    &:after {
+        content: url(../img/pictures/berries_and_leaves.png);
+        position: absolute;
+        right: 1%;
+        bottom: rem(-60px);
+    }
+
+    &:before, &::after {
+        @include tablets {
+            display: none;
+        }
+    }
+
+    @include tablets {
+        background-position: right bottom 220%;
+    }
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: url(../img/pictures/chocolates.png) right center / 50% auto no-repeat;
+
+    @include tablets {
+        background: none;
+    }
+}
+
+

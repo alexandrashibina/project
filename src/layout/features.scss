@@ -1,0 +1,35 @@
+.features {
+    @include tablets {
+        display: none;
+    }
+}
+
+.features__list {
+    display: flex;
+}
+
+.features__item {
+    margin-right: rem(40px);
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+//feature
+
+.feature {
+    display: flex;
+}
+
+.feature__icon {
+    height: rem(40px);
+    width: rem(45px);
+    margin-right: rem(7px);
+    fill: #ffffff;
+}
+
+.feature__text {
+    font-size: rem(16px);
+    max-width: rem(82px);
+
+}

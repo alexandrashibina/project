@@ -1,0 +1,36 @@
+.social {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.social__list {
+    display: flex;
+    align-items: center;
+}
+
+.social__icon {
+    margin-right: rem(20px);
+    
+    &:hover {
+        transition: .5s;
+    }
+
+    &:last-child {
+        margin-right: 0px;
+    }
+
+}
+
+.social__icon-element {
+    display: block;
+    text-decoration: none;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    fill: $socialGrey;
+
+    &:hover {
+        fill: #000000;
+    }
+}
