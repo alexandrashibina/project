@@ -51,11 +51,13 @@
         padding: 0 rem(25px);
 
         @include tablets {
-            padding: 0 rem(35px);
+                width: 100%;
+                height: auto;
         }
 
         @include phones {
-            padding: 0 rem(20px);
+            width: 100%;
+            height: auto;
         }
     }
 
@@ -63,19 +65,25 @@
         height: rem(22px);
         width: rem(16px);
         margin-right: rem(25px);
+        position: relative;
         cursor: pointer;
 
         svg.video__playpause-icon {
             fill: #626262;
+            position: absolute;
             width: 100%;
             height: 100%;
 
             &--play {
-                opacity: 1;
+                top: 0;
+                left: 0;
+                visibility: visible;
             }
 
             &--pause {
-                display: none;
+                top: 0;
+                left: 0;
+                visibility: hidden;
             }
         }
     }
@@ -106,6 +114,7 @@
         transform: translate(-50%, -50%);
 
         svg.video__playback-icon {
+            visibility: visible;
             fill: #ffffff;
         }
     }
@@ -178,17 +187,17 @@
     }
 }
 
-.video__playpause.paused {
+.video__controls.paused {
     .video__playback-icon {
         visibility: hidden;
     }
     .video__playpause-icon {
         &--play {
-            display: none;
+            visibility: hidden;
         }
 
         &--pause {
-            opacity: 1;
+            visibility: visible;
         }
     }
 }

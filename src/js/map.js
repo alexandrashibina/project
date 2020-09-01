@@ -1,6 +1,8 @@
+;
 let myMap;
 
 const init = () => {
+
     myMap = new ymaps.Map("ya-map", {
         center: [55.76, 37.64],
         zoom: 12,

@@ -1,4 +1,4 @@
-const containerVideo = document.querySelector('.video__wrapper');
+const containerVideo = document.querySelector('.video');
 const video = containerVideo.querySelector('video');
 const playpause = containerVideo.querySelector('.video__playpause');
 const play = containerVideo.querySelector('.video__playback');
@@ -18,15 +18,13 @@ video.addEventListener('timeupdate', timeUpdate);
 dynamic.addEventListener('click', mute);
 volume.addEventListener('click', setVolume);
 
-function setVolume() {
+function setVolume(e) {
     volumeProgress.style.width = `${e.offsetX}px`;
-    console.log(e.offsetX / volume.clientWidth)
     video.volume = e.offsetX / volume.clientWidth;
 }
 
 function mute(e) {
     dynamic.classList.toggle('muted');
-    console.log(video.muted)
     video.muted = !video.muted;
 }
 
@@ -38,14 +36,12 @@ function togglePlay() {
     video.paused ?  video.play() : video.pause();
 }
 
-function setCurrentTime(event) {
+function setCurrentTime(e) {
     const offsetX = e.offsetX / total.clientWidth;
-    console.log(offsetX * video.duration)
     video.currentTime = offsetX * video.duration;
 }
 
 function timeUpdate() {
-    console.log('up')
     const progressTime = video.currentTime / video.duration;
 
     progress.style.width = `${progressTime * total.clientWidth}px`;
