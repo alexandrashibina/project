@@ -41,7 +41,7 @@ task("copy:img", () => {
 task("styles", () => {
     return src([...STYLES_LIBS, "src/layout/main.scss"])
         .pipe(gulpif(env == "dev", sourcemaps.init()))
-        .pipe(concat("main.scss"))
+        .pipe(concat("main.min.scss"))
         .pipe(sass().on("error", sass.logError))
         .pipe(gulpif(env == "dev", autoprefixer({
             cascade: false

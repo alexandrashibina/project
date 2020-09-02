@@ -1024,7 +1024,7 @@ table {
 }
 
 .products-section {
-  background: url(/src/img/pictures/products.png) center center/cover no-repeat;
+  background: url(../img/pictures/products.png) center center/cover no-repeat;
   position: relative;
 }
 .products-section__title {
@@ -1615,6 +1615,14 @@ table {
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+.map {
+  height: 100%;
+}
+
+ymaps {
+  height: 100%;
 }
 
 .footer {

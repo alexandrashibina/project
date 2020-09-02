@@ -4,16 +4,16 @@ let myMap;
 const init = () => {
 
     myMap = new ymaps.Map("ya-map", {
-        center: [55.76, 37.64],
-        zoom: 12,
+        center: [55.754086, 37.623591],
+        zoom: 13,
         controls: [],
 
     });
 
     const coords = [
-        [55.75, 37.50],
-        [55.75, 37.71],
-        [55.70, 37.70]
+        [55.758636, 37.601619],
+        [55.757862, 37.619643],
+        [55.754764, 37.631488]
     ];
 
     const myCollection = new ymaps.GeoObjectCollection({}, {
